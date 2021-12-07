@@ -1,6 +1,6 @@
 set -e
 curl -O https://raw.githubusercontent.com/graphitemaster/incbin/main/incbin.h
-printf " " >> incbin.h
+sed -i -e '$a\' incbin.h
 cp main.gn engine/src/flutter/BUILD.gn
 cp incbin.h engine/src/flutter/shell/platform/embedder/
 echo "
