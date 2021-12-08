@@ -3,7 +3,7 @@ name: Flutter Engine
 
 on:
   schedule:
-  - cron: 0 0/2 * * *
+  - cron: 0 0 * * *
   push:
     branches:
     - master
@@ -14,7 +14,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        channel: [stable, beta, dev, master]
+        # channel: [stable, beta, dev, master]
+        channel: [stable, master]
         config:
         - tag: host_debug_unopt
           gn: --embedder-for-target --runtime-mode=debug --unoptimized
