@@ -2,6 +2,7 @@ set -e
 DEPOT_TOOLS_PATH="${PWD}/depot_tools"
 ENGINE_PATH="${PWD}/engine"
 export PATH="$DEPOT_TOOLS_PATH:/usr/local/opt/binutils/bin:$PATH"
+export FLUTTER_PREBUILT_DART_SDK=1
 OUT_PATH="${PWD}/engine_out"
 TARGET=$1
 
